@@ -31,8 +31,8 @@ def extract_banner():
     return results
 
 def api():
-    auth = tweepy.OAuthHandler(config.TWITTER_API_KEY, config.TWITTER_API_SECRET)
-    auth.set_access_token(config.TWITTER_ACCESS_TOKEN_KEY, config.TWITTER_ACCESS_TOKEN_SECRET)
+    auth = tweepy.OAuthHandler(os.environ.get("TWITTER_API_KEY"), os.environ.get("TWITTER_API_SECRET"))
+    auth.set_access_token(os.environ.get("TWITTER_ACCESS_TOKEN_KEY"), os.environ.get("TWITTER_ACCESS_TOKEN_SECRET"))
 
     return tweepy.API(auth)
 
