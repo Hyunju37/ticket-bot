@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import tweepy
 from datetime import datetime
+import os
 
 def extract_banner():
     browser = webdriver.Chrome()
