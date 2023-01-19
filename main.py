@@ -4,6 +4,12 @@ import tweepy
 from datetime import datetime
 import os
 
+def gettoday():
+
+    today = date.today()
+    format_today = today.strftime("%Y.%m.%d")
+    return format_today
+
 def extract_banner():
     browser = webdriver.Chrome()
     base_url = "http://ticket.yes24.com/New/Notice/NoticeMain.aspx"
